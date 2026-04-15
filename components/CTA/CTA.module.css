@@ -1,0 +1,61 @@
+.cta {
+  padding: 6rem 2rem;
+  background-color: orange;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: black;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.primaryButton {
+  background-color: #ffffff;
+  color: blue;
+  padding: 0.9rem 2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.primaryButton:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: #ffffff;
+  padding: 0.9rem 2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid #ffffff;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background-color: #ffffff;
+  color: #cc1111;
+}
