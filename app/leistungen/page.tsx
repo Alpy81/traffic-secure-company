@@ -1,4 +1,11 @@
 import styles from "./leistungen.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Leistungen",
+  description:
+    "Halteverbotszonen, Straßensperrungen, Baustellenabsicherung und Verkehrsplanung – alle Leistungen von Sperrzone24 im Überblick.",
+};
 
 const services = [
   {

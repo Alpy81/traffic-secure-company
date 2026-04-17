@@ -1,6 +1,6 @@
 .cta {
   padding: 6rem 2rem;
-  background-color: orange;
+  background-color: #cc1111;
 }
 
 .container {
@@ -18,7 +18,7 @@
 
 .subtitle {
   font-size: 1.15rem;
-  color: black;
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.7;
   margin-bottom: 2.5rem;
 }
@@ -31,17 +31,18 @@
 
 .primaryButton {
   background-color: #ffffff;
-  color: blue;
+  color: #cc1111;
   padding: 0.9rem 2rem;
   border-radius: 6px;
   font-size: 1rem;
   font-weight: 700;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .primaryButton:hover {
   background-color: #1a1a1a;
   color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .secondaryButton {
@@ -52,10 +53,34 @@
   font-size: 1rem;
   font-weight: 600;
   border: 2px solid #ffffff;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .secondaryButton:hover {
   background-color: #ffffff;
   color: #cc1111;
+  transform: translateY(-1px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 640px) {
+  .cta {
+    padding: 4rem 1.25rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 420px;
+  }
 }

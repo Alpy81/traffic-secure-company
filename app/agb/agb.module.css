@@ -1,0 +1,56 @@
+.page {
+  padding-top: 80px;
+}
+
+.header {
+  background-color: #1a1a1a;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.headerTitle {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.headerSubtitle {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.content {
+  padding: 5rem 2rem;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 3rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.title:first-child {
+  margin-top: 0;
+}
+
+.text {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.85;
+}

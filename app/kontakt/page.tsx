@@ -1,6 +1,17 @@
+"use client";
+
 import styles from "./kontakt.module.css";
+import { useActionState } from "react";
+import { sendContactForm } from "./action";
+
+const initialState = { success: false, error: null };
 
 export default function KontaktPage() {
+  const [state, formAction, isPending] = useActionState(
+    sendContactForm,
+    initialState
+  );
+
   return (
     <main className={styles.page}>
       <section className={styles.header}>
@@ -15,84 +26,94 @@ export default function KontaktPage() {
           <div className={styles.formWrapper}>
             <h2 className={styles.formTitle}>Nachricht senden</h2>
 
-            <form className={styles.form}>
-              <div className={styles.row}>
+            {state.success ? (
+              <div className={styles.successMessage}>
+                <span className={styles.successIcon}>✓</span>
+                <h3 className={styles.successTitle}>Nachricht gesendet!</h3>
+                <p className={styles.successText}>
+                  Vielen Dank für Ihre Anfrage. Wir melden uns innerhalb von 24
+                  Stunden bei Ihnen.
+                </p>
+                <button
+                  className={styles.resetButton}
+                  onClick={() => window.location.reload()}>
+                  Neue Nachricht senden
+                </button>
+              </div>
+            ) : (
+              <form className={styles.form} action={formAction}>
+                <div className={styles.row}>
+                  <div className={styles.field}>
+                    <label className={styles.label}>Name *</label>
+                    <input
+                      type="text"
+                      name="name"
+                      className={styles.input}
+                      placeholder="Ihr vollständiger Name"
+                      required
+                    />
+                  </div>
+                  <div className={styles.field}>
+                    <label className={styles.label}>E-Mail *</label>
+                    <input
+                      type="email"
+                      name="email"
+                      className={styles.input}
+                      placeholder="Ihre E-Mail-Adresse"
+                      required
+                    />
+                  </div>
+                </div>
+
                 <div className={styles.field}>
-                  <label htmlFor="name" className={styles.label}>
-                    Name *
-                  </label>
+                  <label className={styles.label}>Telefon</label>
                   <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Ihr vollständiger Name"
+                    type="tel"
+                    name="telefon"
                     className={styles.input}
-                    required
+                    placeholder="Ihre Telefonnummer (optional)"
                   />
                 </div>
+
                 <div className={styles.field}>
-                  <label htmlFor="email" className={styles.label}>
-                    E-Mail *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Ihre E-Mail-Adresse"
-                    className={styles.input}
-                    required
-                  />
+                  <label className={styles.label}>Betreff *</label>
+                  <select name="betreff" className={styles.select} required>
+                    <option value="">Bitte wählen…</option>
+                    <option value="Halteverbotszone">Halteverbotszone</option>
+                    <option value="Straßensperrung">Straßensperrung</option>
+                    <option value="Baustellenabsicherung">
+                      Baustellenabsicherung
+                    </option>
+                    <option value="Verkehrsplanung">Verkehrsplanung</option>
+                    <option value="Veranstaltungsabsicherung">
+                      Veranstaltungsabsicherung
+                    </option>
+                    <option value="Sonstiges">Sonstiges</option>
+                  </select>
                 </div>
-              </div>
 
-              <div className={styles.field}>
-                <label htmlFor="phone" className={styles.label}>
-                  Telefon
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="Ihre Telefonnummer (optional)"
-                  className={styles.input}
-                />
-              </div>
+                <div className={styles.field}>
+                  <label className={styles.label}>Nachricht *</label>
+                  <textarea
+                    name="nachricht"
+                    className={styles.textarea}
+                    rows={5}
+                    placeholder="Beschreiben Sie Ihr Anliegen…"
+                    required></textarea>
+                </div>
 
-              <div className={styles.field}>
-                <label htmlFor="subject" className={styles.label}>
-                  Betreff *
-                </label>
-                <select
-                  id="subject"
-                  name="subject"
-                  className={styles.select}
-                  required>
-                  <option value="">Bitte wählen...</option>
-                  <option value="halteverbot">Halteverbotszone</option>
-                  <option value="sperrung">Straßensperrung</option>
-                  <option value="baustelle">Baustellenabsicherung</option>
-                  <option value="planung">Verkehrsplanung</option>
-                  <option value="sonstiges">Sonstiges</option>
-                </select>
-              </div>
+                {state.error && (
+                  <p className={styles.errorMessage}>{state.error}</p>
+                )}
 
-              <div className={styles.field}>
-                <label htmlFor="message" className={styles.label}>
-                  Nachricht *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={6}
-                  placeholder="Beschreiben Sie Ihr Anliegen..."
-                  className={styles.textarea}
-                  required></textarea>
-              </div>
-
-              <button type="submit" className={styles.submitButton}>
-                Nachricht absenden
-              </button>
-            </form>
+                <button
+                  type="submit"
+                  className={styles.submitButton}
+                  disabled={isPending}>
+                  {isPending ? "Wird gesendet…" : "Nachricht senden"}
+                </button>
+              </form>
+            )}
           </div>
 
           <div className={styles.info}>
@@ -101,7 +122,7 @@ export default function KontaktPage() {
             <div className={styles.infoItem}>
               <span className={styles.infoIcon}>📍</span>
               <div>
-                <h3 className={styles.infoLabel}>Adresse</h3>
+                <p className={styles.infoLabel}>Adresse</p>
                 <p className={styles.infoText}>
                   Musterstraße 1<br />
                   60311 Frankfurt am Main
@@ -112,7 +133,7 @@ export default function KontaktPage() {
             <div className={styles.infoItem}>
               <span className={styles.infoIcon}>📞</span>
               <div>
-                <h3 className={styles.infoLabel}>Telefon</h3>
+                <p className={styles.infoLabel}>Telefon</p>
                 <p className={styles.infoText}>+49 123 456 789</p>
               </div>
             </div>
@@ -120,7 +141,7 @@ export default function KontaktPage() {
             <div className={styles.infoItem}>
               <span className={styles.infoIcon}>✉️</span>
               <div>
-                <h3 className={styles.infoLabel}>E-Mail</h3>
+                <p className={styles.infoLabel}>E-Mail</p>
                 <p className={styles.infoText}>info@sperrzone24.de</p>
               </div>
             </div>
@@ -128,7 +149,7 @@ export default function KontaktPage() {
             <div className={styles.infoItem}>
               <span className={styles.infoIcon}>🕐</span>
               <div>
-                <h3 className={styles.infoLabel}>Öffnungszeiten</h3>
+                <p className={styles.infoLabel}>Öffnungszeiten</p>
                 <p className={styles.infoText}>
                   Mo – Fr: 07:00 – 18:00 Uhr
                   <br />

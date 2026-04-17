@@ -17,7 +17,7 @@
 
 .headerSubtitle {
   font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: red;
 }
 
 .servicesList {
@@ -34,7 +34,7 @@
 }
 
 .serviceItem {
-  background-color: orange;
+  background-color: rgb(251, 196, 93);
   border-radius: 12px;
   padding: 3rem;
   border: 1px solid rgba(0, 0, 0, 0.06);
@@ -61,7 +61,7 @@
 
 .serviceDescription {
   font-size: 1rem;
-  color: #555555;
+  color: black;
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
@@ -74,6 +74,6 @@
 
 .featureItem {
   font-size: 0.95rem;
-  color: #333333;
+  color: blue;
   font-weight: 500;
 }

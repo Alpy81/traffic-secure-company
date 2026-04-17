@@ -1,0 +1,169 @@
+.page {
+  padding-top: 80px;
+}
+
+.header {
+  background-color: #1a1a1a;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.headerTitle {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.headerSubtitle {
+  font-size: 1.15rem;
+  color: red;
+}
+
+.content {
+  padding: 5rem 2rem;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* ---- Calendly Embed ---- */
+
+.embedWrapper {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  min-width: 0;
+}
+
+.calendly {
+  width: 100%;
+  height: 700px;
+  border: none;
+  display: block;
+}
+
+/* ---- Info Sidebar ---- */
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.infoTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.stepNumber {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background-color: #cc1111;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.3rem;
+}
+
+.stepText {
+  font-size: 0.92rem;
+  color: #555555;
+  line-height: 1.65;
+}
+
+.infoBox {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 1.75rem;
+}
+
+.infoBoxTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.infoBoxText {
+  font-size: 0.92rem;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.phoneLink {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #cc1111;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.phoneLink:hover {
+  color: #a60e0e;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .calendly {
+    height: 650px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 4rem 1.25rem;
+  }
+
+  .headerTitle {
+    font-size: 2.2rem;
+  }
+
+  .content {
+    padding: 3rem 1rem;
+  }
+
+  .calendly {
+    height: 600px;
+  }
+}
