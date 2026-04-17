@@ -1,4 +1,11 @@
 import styles from "./ueber-uns.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Über Uns",
+  description:
+    "Erfahren Sie mehr über Sperrzone24 – Ihr zuverlässiger Partner für Verkehrssicherung in Frankfurt und Umgebung.",
+};
 
 const values = [
   {
