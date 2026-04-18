@@ -1,12 +1,16 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <div className={styles.column}>
-          <h3 className={styles.columnTitle}>SPERRZONE24</h3>
+        <div className={`${styles.column} ${styles.brandColumn}`}>
+          <Link href="/" className={styles.brand} aria-label="Zur Startseite">
+            <Image src="/logo.png" alt="Sperrzone24" width={240} height={54} />
+          </Link>
+
           <p className={styles.description}>
             Professionelle Verkehrssicherung in Frankfurt und Umgebung –
             zuverlässig, schnell und rund um die Uhr.
