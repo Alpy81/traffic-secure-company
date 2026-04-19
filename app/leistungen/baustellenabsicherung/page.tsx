@@ -40,7 +40,7 @@ export default function BaustellenabsicherungPage() {
               <h2 className={styles.sectionTitle}>Was wir für Sie tun</h2>
               <p className={styles.text}>
                 Baustellen im Straßenraum stellen hohe Anforderungen an die
-                Verkehrssicherung. Sperrzone24 übernimmt die vollständige
+                Verkehrssicherung. SperrZone24 übernimmt die vollständige
                 Absicherung Ihrer Baustelle – von der Planung über die
                 Aufstellung bis zur laufenden Kontrolle.
               </p>

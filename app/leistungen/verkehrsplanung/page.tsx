@@ -41,7 +41,7 @@ export default function VerkehrsplanungPage() {
               <p className={styles.text}>
                 Eine durchdachte Verkehrsplanung ist die Grundlage jeder
                 erfolgreichen Baustellenabsicherung oder Straßensperrung.
-                Sperrzone24 erstellt für Sie professionelle
+                SperrZone24 erstellt für Sie professionelle
                 Verkehrszeichenpläne, die den Anforderungen der Behörden
                 vollständig entsprechen.
               </p>

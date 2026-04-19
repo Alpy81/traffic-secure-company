@@ -41,7 +41,7 @@ export default function BeratungServicePage() {
               <p className={styles.text}>
                 Kein Projekt gleicht dem anderen. Ob kleine Halteverbotszone
                 oder komplexe Baustellenabsicherung über mehrere Wochen –
-                Sperrzone24 berät Sie individuell und entwickelt gemeinsam mit
+                SperrZone24 berät Sie individuell und entwickelt gemeinsam mit
                 Ihnen die passende Lösung.
               </p>
               <p className={styles.text}>

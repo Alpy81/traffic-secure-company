@@ -31,12 +31,13 @@ export default function DatenschutzPage() {
                 1. Verantwortlicher
               </h2>
               <p className={styles.text}>
-                Sperrzone24 Musterfirma
+                Yunus Kurt
                 <br />
-                Max Mustermann
+                SperrZone24
                 <br />
-                Musterstraße 1<br />
-                60311 Frankfurt am Main
+                Goethestr. 41
+                <br />
+                63477 Maintal
                 <br />
                 Deutschland
                 <br />

@@ -119,9 +119,7 @@ export default function Footer() {
             </li>
           </ul>
 
-          <Link href="/termin" className={styles.ctaButton}>
-            Termin buchen →
-          </Link>
+          <p className={styles.ownerName}>Inhaber: Yunus Kurt</p>
         </div>
       </div>
 

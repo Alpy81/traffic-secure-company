@@ -79,7 +79,7 @@ export default function UeberUnsPage() {
             </h2>
 
             <p className={styles.storyText}>
-              Sperrzone24 ist ein erfahrenes Unternehmen für Verkehrssicherung
+              SperrZone24 ist ein erfahrenes Unternehmen für Verkehrssicherung
               mit Sitz in Frankfurt am Main. Seit unserer Gründung setzen wir
               auf höchste Qualität, schnelle Reaktionszeiten und eine enge
               Zusammenarbeit mit unseren Kunden.

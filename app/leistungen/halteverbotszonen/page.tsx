@@ -45,7 +45,7 @@ export default function HalteverbotszenenPage() {
               <p className={styles.text}>
                 Eine Halteverbotszone ist schnell aufgestellt – aber ohne die
                 richtige Genehmigung drohen Bußgelder und Komplikationen.
-                Sperrzone24 übernimmt für Sie die gesamte Abwicklung: von der
+                SperrZone24 übernimmt für Sie die gesamte Abwicklung: von der
                 Beantragung bei der Behörde bis zur fachgerechten Aufstellung
                 der Schilder – alles aus einer Hand.
               </p>

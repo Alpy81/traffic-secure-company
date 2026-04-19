@@ -42,7 +42,7 @@ export default function BereitschaftPage() {
                 Verkehrssicherung kennt keine Öffnungszeiten. Unfälle,
                 Rohrbrüche, Sturmschäden oder kurzfristige Baustellen können
                 jederzeit entstehen – auch nachts, am Wochenende oder an
-                Feiertagen. Sperrzone24 ist immer erreichbar.
+                Feiertagen. SperrZone24 ist immer erreichbar.
               </p>
               <p className={styles.text}>
                 Unser Bereitschaftsteam reagiert schnell, rückt umgehend aus und

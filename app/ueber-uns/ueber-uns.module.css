@@ -121,7 +121,7 @@
 .storyImageWrapper {
   position: relative;
   width: 100%;
-  height: 480px;
+  height: 600px;
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-lg);

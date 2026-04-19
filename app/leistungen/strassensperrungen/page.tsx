@@ -40,7 +40,7 @@ export default function StrassensperrungenPage() {
               <h2 className={styles.sectionTitle}>Was wir für Sie tun</h2>
               <p className={styles.text}>
                 Straßensperrungen erfordern präzise Planung, behördliche
-                Abstimmung und professionelle Umsetzung. Sperrzone24 übernimmt
+                Abstimmung und professionelle Umsetzung. SperrZone24 übernimmt
                 die gesamte Koordination – von der Antragstellung bis zur
                 vollständigen Beschilderung nach StVO.
               </p>

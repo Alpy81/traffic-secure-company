@@ -218,7 +218,7 @@
 
 .copyright {
   font-size: 0.8rem;
-  color: #f59e0b;
+  color: rgba(255, 255, 255, 0.5);
   margin: 0;
 }
 
@@ -236,6 +236,15 @@
 
 .legalLinks a:hover {
   color: rgba(255, 255, 255, 0.7);
+}
+
+/* NEU hinzufügen: */
+.ownerName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+  letter-spacing: 0.02em;
 }
 
 /* ── Responsive ────────────────────────────────── */
@@ -260,6 +269,10 @@
 @media (max-width: 640px) {
   .footer {
     padding: 4rem 1.25rem 0;
+  }
+
+  .brand img {
+    width: 200px !important;
   }
 
   .container {

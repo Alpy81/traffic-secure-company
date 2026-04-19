@@ -31,7 +31,7 @@ export default function AGBPage() {
                 1. Geltungsbereich
               </h2>
               <p className={styles.text}>
-                Diese AGB gelten für alle Verträge zwischen Sperrzone24 und
+                Diese AGB gelten für alle Verträge zwischen SperrZone24 und
                 seinen Kunden über Leistungen im Bereich Verkehrssicherung.
               </p>
             </div>

@@ -30,12 +30,13 @@ export default function ImpressumPage() {
                 Anbieter
               </h2>
               <p className={styles.text}>
-                Sperrzone24 Musterfirma
+                Yunus Kurt
                 <br />
-                Max Mustermann
+                SperrZone24
                 <br />
-                Musterstraße 1<br />
-                60311 Frankfurt am Main
+                Goethestr. 41
+                <br />
+                63477 Maintal
                 <br />
                 Deutschland
               </p>
@@ -47,13 +48,13 @@ export default function ImpressumPage() {
                 Kontakt
               </h2>
               <p className={styles.text}>
-                Telefon: +49 123 456 789
+                Telefon: +49 172 93 98 423
                 <br />
                 E-Mail: info@sperrzone24.de
               </p>
             </div>
 
-            <div className={styles.section}>
+            {/* <div className={styles.section}>
               <h2 className={styles.title}>
                 <span className={styles.titleDot} />
                 Umsatzsteuer
@@ -62,9 +63,9 @@ export default function ImpressumPage() {
                 Umsatzsteuer-Identifikationsnummer gemäß § 27 a
                 Umsatzsteuergesetz: DE123456789 (Musterdaten)
               </p>
-            </div>
+            </div> */}
 
-            <div className={styles.section}>
+            {/* <div className={styles.section}>
               <h2 className={styles.title}>
                 <span className={styles.titleDot} />
                 Registereintrag
@@ -76,14 +77,14 @@ export default function ImpressumPage() {
                 <br />
                 Registernummer: HRB 12345 (Musterdaten)
               </p>
-            </div>
+            </div> */}
 
             <div className={styles.section}>
               <h2 className={styles.title}>
                 <span className={styles.titleDot} />
                 Verantwortlich für den Inhalt
               </h2>
-              <p className={styles.text}>Max Mustermann, Anschrift wie oben.</p>
+              <p className={styles.text}>Yunus Kurt, Anschrift wie oben.</p>
             </div>
 
             <div className={styles.section}>
