@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.css";
 
 const navItems = [
@@ -14,8 +15,15 @@ const navItems = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
-  // Mobile-Menü schließen, wenn man wieder auf Desktop wechselt
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   useEffect(() => {
     const onResize = () => {
       if (window.innerWidth > 900) setOpen(false);
@@ -24,7 +32,6 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  // Scroll lock wenn Menü offen ist
   useEffect(() => {
     if (open) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "";
@@ -34,15 +41,17 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <nav className={styles.navbar}>
+    <nav
+      className={`${styles.navbar} ${scrolled ? styles.navbarScrolled : ""}`}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo} onClick={() => setOpen(false)}>
           <Image
             src="/logo.png"
             alt="Sperrzone24"
-            width={240}
-            height={54}
+            width={200}
+            height={45}
             priority
+            style={{ width: "200px", height: "auto" }}
           />
         </Link>
 
@@ -50,7 +59,13 @@ export default function Navbar() {
         <ul className={styles.navLinks}>
           {navItems.map((item) => (
             <li key={item.href}>
-              <Link href={item.href}>{item.label}</Link>
+              <Link
+                href={item.href}
+                className={`${styles.navLink} ${
+                  pathname === item.href ? styles.navLinkActive : ""
+                }`}>
+                {item.label}
+              </Link>
             </li>
           ))}
         </ul>
@@ -60,7 +75,6 @@ export default function Navbar() {
             Termin buchen
           </Link>
 
-          {/* Burger (Mobile) */}
           <button
             type="button"
             className={`${styles.burger} ${open ? styles.burgerOpen : ""}`}
@@ -75,12 +89,10 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
       {open && (
         <div className={styles.mobileOverlay} onClick={() => setOpen(false)} />
       )}
 
-      {/* Mobile Menu */}
       <div
         id="mobile-menu"
         className={`${styles.mobileMenu} ${open ? styles.mobileMenuOpen : ""}`}>
@@ -89,12 +101,13 @@ export default function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className={styles.mobileLink}
+              className={`${styles.mobileLink} ${
+                pathname === item.href ? styles.mobileLinkActive : ""
+              }`}
               onClick={() => setOpen(false)}>
               {item.label}
             </Link>
           ))}
-
           <Link
             href="/termin"
             className={styles.mobileCta}

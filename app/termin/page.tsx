@@ -10,7 +10,13 @@ export const metadata: Metadata = {
 export default function TerminPage() {
   return (
     <main className={styles.page}>
+      {/* Hero */}
       <section className={styles.header}>
+        <div className={styles.headerLabel}>
+          <span className={styles.headerLabelLine} />
+          Jetzt buchen
+          <span className={styles.headerLabelLine} />
+        </div>
         <h1 className={styles.headerTitle}>Termin buchen</h1>
         <p className={styles.headerSubtitle}>
           Wählen Sie direkt einen freien Termin – schnell, einfach und
@@ -18,10 +24,11 @@ export default function TerminPage() {
         </p>
       </section>
 
+      {/* Content */}
       <section className={styles.content}>
         <div className={styles.container}>
+          {/* Calendly Embed */}
           <div className={styles.embedWrapper}>
-            {/* Ersetze die URL mit deinem echten Calendly-Link */}
             <iframe
               src="https://calendly.com/aertas90?hide_gdpr_banner=1"
               className={styles.calendly}
@@ -31,8 +38,9 @@ export default function TerminPage() {
             />
           </div>
 
+          {/* Sidebar */}
           <div className={styles.info}>
-            <h2 className={styles.infoTitle}>So funktioniert&apos;s</h2>
+            <h2 className={styles.infoTitle}>So funktioniert es</h2>
 
             <div className={styles.steps}>
               <div className={styles.step}>
@@ -69,10 +77,15 @@ export default function TerminPage() {
               </div>
             </div>
 
+            {/* Notfall Box */}
             <div className={styles.infoBox}>
-              <p className={styles.infoBoxTitle}>Dringend?</p>
+              <p className={styles.infoBoxTitle}>
+                <span className={styles.infoBoxDot} />
+                Dringender Notfall?
+              </p>
               <p className={styles.infoBoxText}>
-                Für kurzfristige Anfragen erreichen Sie uns direkt telefonisch:
+                Für kurzfristige Anfragen erreichen Sie uns direkt telefonisch —
+                wir sind 24/7 erreichbar.
               </p>
               <a href="tel:+49123456789" className={styles.phoneLink}>
                 📞 +49 123 456 789

@@ -5,18 +5,41 @@ import styles from "./Footer.module.css";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.container}>
-        <div className={`${styles.column} ${styles.brandColumn}`}>
-          <Link href="/" className={styles.brand} aria-label="Zur Startseite">
-            <Image src="/logo.png" alt="Sperrzone24" width={240} height={54} />
-          </Link>
+      {/* Dekorative Trennlinie oben */}
+      <div className={styles.topBar} />
 
-          <p className={styles.description}>
+      <div className={styles.container}>
+        {/* Brand Spalte */}
+        <div className={`${styles.column} ${styles.brandColumn}`}>
+          <Link
+            href="/"
+            className={styles.brand}
+            aria-label="Zur Startseite"
+            style={{ marginLeft: "-20px" }}>
+            <Image
+              src="/logo.png"
+              alt="Sperrzone24"
+              width={260}
+              height={45}
+              style={{ width: "260px", height: "auto" }}
+            />
+          </Link>
+          <p
+            className={styles.description}
+            style={{ marginTop: "-2rem", marginBottom: "1.5rem" }}>
             Professionelle Verkehrssicherung in Frankfurt und Umgebung –
             zuverlässig, schnell und rund um die Uhr.
           </p>
+          {/* Notfall Badge */}
+          <div className={styles.emergencyBadge} style={{}}>
+            <span className={styles.emergencyDot} />
+            <span className={styles.emergencyText}>
+              24/7 Notfallbereitschaft
+            </span>
+          </div>
         </div>
 
+        {/* Navigation */}
         <div className={styles.column}>
           <h4 className={styles.columnTitle}>Navigation</h4>
           <ul className={styles.linkList}>
@@ -35,36 +58,76 @@ export default function Footer() {
           </ul>
         </div>
 
+        {/* Leistungen */}
         <div className={styles.column}>
           <h4 className={styles.columnTitle}>Leistungen</h4>
           <ul className={styles.linkList}>
             <li>
-              <Link href="/leistungen">Halteverbotszonen</Link>
+              <Link href="/leistungen/halteverbotszonen">
+                Halteverbotszonen
+              </Link>
             </li>
             <li>
-              <Link href="/leistungen">Straßensperrungen</Link>
+              <Link href="/leistungen/strassensperrungen">
+                Straßensperrungen
+              </Link>
             </li>
             <li>
-              <Link href="/leistungen">Baustellenabsicherung</Link>
+              <Link href="/leistungen/baustellenabsicherung">
+                Baustellenabsicherung
+              </Link>
             </li>
             <li>
-              <Link href="/leistungen">Verkehrsplanung</Link>
+              <Link href="/leistungen/verkehrsplanung">Verkehrsplanung</Link>
+            </li>
+            <li>
+              <Link href="/leistungen/24-7-bereitschaft">
+                24/7 Bereitschaft
+              </Link>
+            </li>
+            <li>
+              <Link href="/leistungen/beratung-service">
+                Beratung & Service
+              </Link>
             </li>
           </ul>
         </div>
 
+        {/* Kontakt */}
         <div className={styles.column}>
           <h4 className={styles.columnTitle}>Kontakt</h4>
           <ul className={styles.contactList}>
-            <li>📍 Frankfurt am Main</li>
-            <li>📞 +49 123 456 789</li>
-            <li>✉️ info@sperrzone24.de</li>
+            <li>
+              <span className={styles.contactIcon}>📍</span>
+              <span>
+                Goethestr. 41
+                <br />
+                63477 Maintal
+              </span>
+            </li>
+            <li>
+              <span className={styles.contactIcon}>📞</span>
+              <Link href="tel:+49123456789">+49 172 93 98 423</Link>
+            </li>
+            <li>
+              <span className={styles.contactIcon}>✉️</span>
+              <Link href="mailto:info@sperrzone24.de">info@sperrzone24.de</Link>
+            </li>
+            <li>
+              <span className={styles.contactIcon}>🕐</span>
+              <span>Mo–Fr: 07:00–18:00 Uhr</span>
+            </li>
           </ul>
+
+          <Link href="/termin" className={styles.ctaButton}>
+            Termin buchen →
+          </Link>
         </div>
       </div>
 
+      {/* Bottom Bar */}
       <div className={styles.bottom}>
-        <p>
+        <p className={styles.copyright}>
           &copy; {new Date().getFullYear()} Sperrzone24. Alle Rechte
           vorbehalten.
         </p>

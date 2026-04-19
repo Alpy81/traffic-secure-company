@@ -1,28 +1,109 @@
+/* ── Page ──────────────────────────────────────── */
 .page {
-  padding-top: 80px;
+  padding-top: 0;
 }
 
+/* ── Hero ──────────────────────────────────────── */
 .header {
-  background-color: #1a1a1a;
-  padding: 5rem 2rem;
+  background-color: var(--color-bg);
+  padding: calc(var(--navbar-height) + 4rem) 2rem 5rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--color-blue),
+    var(--color-orange),
+    var(--color-red)
+  );
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(245, 158, 11, 0.06) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.headerLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-orange);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.headerLabelLine {
+  width: 32px;
+  height: 2px;
+  background: var(--color-orange);
+  border-radius: var(--radius-full);
 }
 
 .headerTitle {
-  font-size: 2.8rem;
-  font-weight: 800;
+  font-size: clamp(2.25rem, 6vw, 4rem);
+  font-weight: 900;
   color: #ffffff;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  position: relative;
+  z-index: 1;
 }
 
 .headerSubtitle {
-  font-size: 1.15rem;
-  color: red;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.75;
+  position: relative;
+  z-index: 1;
 }
 
+/* ── Story Section ─────────────────────────────── */
 .story {
-  padding: 5rem 2rem;
-  background-color: #ffffff;
+  padding: 8rem 2rem;
+  background-color: var(--color-bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.story::before {
+  content: "";
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.07) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
 }
 
 .storyContainer {
@@ -30,139 +111,348 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 5rem;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
-.imagePlaceholder {
+/* ── Story Bild ────────────────────────────────── */
+.storyImageWrapper {
+  position: relative;
   width: 100%;
-  height: 400px;
-  background-color: #e0e0e0;
-  border-radius: 12px;
+  height: 480px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.storyImageWrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 14, 26, 0.3) 0%,
+    transparent 60%
+  );
+  z-index: 1;
+}
+
+.storyImage {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.storyImageWrapper:hover .storyImage {
+  transform: scale(1.04);
+}
+
+/* ── Story Bild Badge ──────────────────────────── */
+.storyBadge {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 2;
+  background: rgba(10, 14, 26, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.storyBadgeIcon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--color-orange), var(--color-red));
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.storyBadgeText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.storyBadgeTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.storyBadgeSub {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ── Story Content ─────────────────────────────── */
+.storyContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.storyLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-orange);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.storyLabelLine {
+  width: 32px;
+  height: 2px;
+  background: var(--color-orange);
+  border-radius: var(--radius-full);
 }
 
 .storyTitle {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #1a1a1a;
-  margin-bottom: 1.5rem;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.storyTitleAccent {
+  background: linear-gradient(135deg, var(--color-orange), var(--color-red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .storyText {
-  font-size: 1.05rem;
-  color: #555555;
-  line-height: 1.8;
-  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.85;
 }
 
+/* ── Story Stats ───────────────────────────────── */
+.storyStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.storyStat {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.storyStat:hover {
+  border-color: rgba(245, 158, 11, 0.25);
+  background: rgba(245, 158, 11, 0.04);
+}
+
+.storyStatNumber {
+  font-size: 1.75rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--color-orange), var(--color-red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+  display: block;
+}
+
+.storyStatLabel {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 0.35rem;
+  display: block;
+}
+
+/* ── Values Section ────────────────────────────── */
 .values {
-  padding: 5rem 2rem;
-  background-color: #f8f8f8;
+  padding: 8rem 2rem;
+  background-color: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.values::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(
+    circle,
+    rgba(220, 38, 38, 0.05) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
 }
 
 .valuesContainer {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
-.valuesTitle {
+.valuesHeader {
   text-align: center;
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #1a1a1a;
+  margin-bottom: 4rem;
+}
+
+.valuesLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-orange);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
-.valuesSubtitle {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #666666;
-  margin-bottom: 3rem;
+.valuesLabelLine {
+  width: 32px;
+  height: 2px;
+  background: var(--color-orange);
+  border-radius: var(--radius-full);
 }
 
+.valuesTitle {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.valuesSubtitle {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+/* ── Values Grid ───────────────────────────────── */
 .valuesGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .valueCard {
-  background-color: rgb(251, 196, 93);
-  padding: 2.5rem 2rem;
-  border-radius: 12px;
+  background: var(--color-bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 1.75rem;
   text-align: center;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .valueCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+  border-color: rgba(245, 158, 11, 0.25);
 }
 
-.valueIcon {
-  font-size: 2.5rem;
-  display: block;
-  margin-bottom: 1.2rem;
+.valueIconWrapper {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(
+    135deg,
+    rgba(245, 158, 11, 0.12),
+    rgba(220, 38, 38, 0.12)
+  );
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 1.75rem;
+  transition: background-color 0.3s ease;
+}
+
+.valueCard:hover .valueIconWrapper {
+  background: linear-gradient(
+    135deg,
+    rgba(245, 158, 11, 0.2),
+    rgba(220, 38, 38, 0.2)
+  );
 }
 
 .valueCardTitle {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.01em;
 }
 
 .valueCardDescription {
-  font-size: 0.9rem;
-  color: #555555;
-  line-height: 1.7;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.75;
 }
 
-/* RESPONSIVE */
-
+/* ── Responsive ────────────────────────────────── */
 @media (max-width: 1024px) {
   .storyContainer {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 3rem;
   }
 
-  .imagePlaceholder {
-    height: 340px;
+  .storyImageWrapper {
+    height: 380px;
   }
 
   .valuesGrid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .valueCard {
-    padding: 2rem 1.5rem;
-  }
 }
 
 @media (max-width: 640px) {
-  .header {
-    padding: 4rem 1.25rem;
-  }
-
-  .headerTitle {
-    font-size: 2.2rem;
-  }
-
   .story {
-    padding: 4rem 1.25rem;
-  }
-
-  .imagePlaceholder {
-    height: 300px;
+    padding: 5rem 1.25rem;
   }
 
   .values {
-    padding: 4rem 1.25rem;
+    padding: 5rem 1.25rem;
   }
 
-  .valuesTitle {
-    font-size: 2rem;
+  .storyImageWrapper {
+    height: 280px;
+  }
+
+  .storyStats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+
+  .storyStatNumber {
+    font-size: 1.4rem;
   }
 
   .valuesGrid {

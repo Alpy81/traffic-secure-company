@@ -1,4 +1,5 @@
 import styles from "./ueber-uns.module.css";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -37,20 +38,46 @@ const values = [
 export default function UeberUnsPage() {
   return (
     <main className={styles.page}>
+      {/* Hero */}
       <section className={styles.header}>
+        <div className={styles.headerLabel}>
+          <span className={styles.headerLabelLine} />
+          Sperrzone24
+          <span className={styles.headerLabelLine} />
+        </div>
         <h1 className={styles.headerTitle}>Über Uns</h1>
         <p className={styles.headerSubtitle}>
-          Ihr Partner für Verkehrssicherung in Frankfurt und Umgebung.
+          Ihr zuverlässiger Partner für professionelle Verkehrssicherung in
+          Frankfurt und Umgebung.
         </p>
       </section>
 
+      {/* Story */}
       <section className={styles.story}>
         <div className={styles.storyContainer}>
-          <div className={styles.storyImage}>
-            <div className={styles.imagePlaceholder}></div>
+          {/* Bild */}
+          <div className={styles.storyImageWrapper}>
+            <Image
+              src="/images/equipment.webp"
+              alt="Sperrzone24 Einsatzfahrzeug"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className={styles.storyImage}
+            />
           </div>
+
+          {/* Content */}
           <div className={styles.storyContent}>
-            <h2 className={styles.storyTitle}>Wer wir sind</h2>
+            <div className={styles.storyLabel}>
+              <span className={styles.storyLabelLine} />
+              Wer wir sind
+            </div>
+
+            <h2 className={styles.storyTitle}>
+              Erfahrung trifft{" "}
+              <span className={styles.storyTitleAccent}>Professionalität</span>
+            </h2>
+
             <p className={styles.storyText}>
               Sperrzone24 ist ein erfahrenes Unternehmen für Verkehrssicherung
               mit Sitz in Frankfurt am Main. Seit unserer Gründung setzen wir
@@ -64,20 +91,44 @@ export default function UeberUnsPage() {
               Straßensperrung – wir übernehmen die Planung, Genehmigung und
               Umsetzung für Sie.
             </p>
+
+            <div className={styles.storyStats}>
+              <div className={styles.storyStat}>
+                <span className={styles.storyStatNumber}>500+</span>
+                <span className={styles.storyStatLabel}>Projekte</span>
+              </div>
+              <div className={styles.storyStat}>
+                <span className={styles.storyStatNumber}>24/7</span>
+                <span className={styles.storyStatLabel}>Erreichbar</span>
+              </div>
+              <div className={styles.storyStat}>
+                <span className={styles.storyStatNumber}>100%</span>
+                <span className={styles.storyStatLabel}>Zuverlässig</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Values */}
       <section className={styles.values}>
         <div className={styles.valuesContainer}>
-          <h2 className={styles.valuesTitle}>Unsere Werte</h2>
-          <p className={styles.valuesSubtitle}>
-            Diese Grundsätze leiten unser tägliches Handeln.
-          </p>
+          <div className={styles.valuesHeader}>
+            <div className={styles.valuesLabel}>
+              <span className={styles.valuesLabelLine} />
+              Was uns auszeichnet
+              <span className={styles.valuesLabelLine} />
+            </div>
+            <h2 className={styles.valuesTitle}>Unsere Werte</h2>
+            <p className={styles.valuesSubtitle}>
+              Diese Grundsätze leiten unser tägliches Handeln.
+            </p>
+          </div>
+
           <div className={styles.valuesGrid}>
             {values.map((value, index) => (
               <div key={index} className={styles.valueCard}>
-                <span className={styles.valueIcon}>{value.icon}</span>
+                <div className={styles.valueIconWrapper}>{value.icon}</div>
                 <h3 className={styles.valueCardTitle}>{value.title}</h3>
                 <p className={styles.valueCardDescription}>
                   {value.description}

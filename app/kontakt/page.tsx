@@ -3,6 +3,7 @@
 import styles from "./kontakt.module.css";
 import { useActionState } from "react";
 import { sendContactForm } from "./action";
+import Link from "next/link";
 
 const initialState = { success: false, error: null };
 
@@ -14,15 +15,23 @@ export default function KontaktPage() {
 
   return (
     <main className={styles.page}>
+      {/* Hero */}
       <section className={styles.header}>
+        <div className={styles.headerLabel}>
+          <span className={styles.headerLabelLine} />
+          Sprechen Sie uns an
+          <span className={styles.headerLabelLine} />
+        </div>
         <h1 className={styles.headerTitle}>Kontakt</h1>
         <p className={styles.headerSubtitle}>
           Wir freuen uns auf Ihre Nachricht – unverbindlich und kostenlos.
         </p>
       </section>
 
+      {/* Content */}
       <section className={styles.content}>
         <div className={styles.container}>
+          {/* Formular */}
           <div className={styles.formWrapper}>
             <h2 className={styles.formTitle}>Nachricht senden</h2>
 
@@ -99,7 +108,8 @@ export default function KontaktPage() {
                     className={styles.textarea}
                     rows={5}
                     placeholder="Beschreiben Sie Ihr Anliegen…"
-                    required></textarea>
+                    required
+                  />
                 </div>
 
                 {state.error && (
@@ -116,38 +126,46 @@ export default function KontaktPage() {
             )}
           </div>
 
+          {/* Info Spalte */}
           <div className={styles.info}>
             <h2 className={styles.infoTitle}>Kontaktdaten</h2>
 
             <div className={styles.infoItem}>
-              <span className={styles.infoIcon}>📍</span>
+              <div className={styles.infoIconWrapper}>📍</div>
               <div>
                 <p className={styles.infoLabel}>Adresse</p>
                 <p className={styles.infoText}>
-                  Musterstraße 1<br />
-                  60311 Frankfurt am Main
+                  Goethestr. 41
+                  <br />
+                  63477 Maintal
                 </p>
               </div>
             </div>
 
             <div className={styles.infoItem}>
-              <span className={styles.infoIcon}>📞</span>
+              <div className={styles.infoIconWrapper}>📞</div>
               <div>
                 <p className={styles.infoLabel}>Telefon</p>
-                <p className={styles.infoText}>+49 123 456 789</p>
+                <p className={styles.infoText}>
+                  <Link href="tel:+49123456789">+49 172 93 98 423</Link>
+                </p>
               </div>
             </div>
 
             <div className={styles.infoItem}>
-              <span className={styles.infoIcon}>✉️</span>
+              <div className={styles.infoIconWrapper}>✉️</div>
               <div>
                 <p className={styles.infoLabel}>E-Mail</p>
-                <p className={styles.infoText}>info@sperrzone24.de</p>
+                <p className={styles.infoText}>
+                  <Link href="mailto:info@sperrzone24.de">
+                    info@sperrzone24.de
+                  </Link>
+                </p>
               </div>
             </div>
 
             <div className={styles.infoItem}>
-              <span className={styles.infoIcon}>🕐</span>
+              <div className={styles.infoIconWrapper}>🕐</div>
               <div>
                 <p className={styles.infoLabel}>Öffnungszeiten</p>
                 <p className={styles.infoText}>
@@ -156,6 +174,17 @@ export default function KontaktPage() {
                   Notdienst: 24/7
                 </p>
               </div>
+            </div>
+
+            {/* Notfall Box */}
+            <div className={styles.emergencyBox}>
+              <p className={styles.emergencyTitle}>
+                <span className={styles.emergencyDot} />
+                Dringender Notfall?
+              </p>
+              <Link href="tel:+49123456789" className={styles.emergencyNumber}>
+                +49 172 93 98 423
+              </Link>
             </div>
           </div>
         </div>
