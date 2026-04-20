@@ -167,6 +167,8 @@ This project was developed as a custom client website. All rights reserved © 20
 
 <img src="/public/images/websylon.png" alt="WEBSYLON" width="200" />
 
+##
+
 **WEBSYLON** — Professional Web Development & Digital Solutions
 
 _Frankfurt am Main, Germany_
