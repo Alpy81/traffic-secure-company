@@ -29,7 +29,7 @@ export async function sendContactForm(
 
   try {
     await resend.emails.send({
-      from: "Sperrzone24 Kontaktformular <onboarding@resend.dev>",
+      from: "Sperrzone24 Kontaktformular <info@sperrzone24.de>",
       to: process.env.CONTACT_EMAIL!,
       replyTo: email,
       subject: `Kontaktanfrage: ${betreff}`,
