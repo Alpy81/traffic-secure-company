@@ -72,6 +72,9 @@
   text-transform: uppercase;
   padding: 0.45rem 1rem;
   border-radius: var(--radius-full);
+  max-width: 90vw;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .badgeDot {
@@ -239,6 +242,18 @@
 }
 
 @media (max-width: 480px) {
+  .badge {
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    padding: 0.4rem 0.85rem;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .badgeDot {
+    flex-shrink: 0;
+  }
   .statsBar {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
