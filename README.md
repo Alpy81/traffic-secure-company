@@ -160,3 +160,21 @@ Set the following in **Vercel Dashboard → Settings → Environment Variables**
 This project was developed as a custom client website. All rights reserved © 2026 Sperrzone24.
 
 ---
+
+## 👨‍💻 Built by
+
+<div align="center">
+
+<img src="/public/images/websylon.png" alt="WEBSYLON" width="200" />
+
+**WEBSYLON** — Professional Web Development & Digital Solutions
+
+_Frankfurt am Main, Germany_
+
+</div>
+
+---
+
+<div align="center">
+  <sub>© 2026 WEBSYLON. All rights reserved.</sub>
+</div>
