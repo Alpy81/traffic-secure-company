@@ -48,7 +48,7 @@ export default function ImpressumPage() {
                 Kontakt
               </h2>
               <p className={styles.text}>
-                Telefon: +49 172 93 98 423
+                Telefon: +49 173 666 09 00
                 <br />
                 E-Mail: info@sperrzone24.de
               </p>
