@@ -126,7 +126,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className={styles.bottom}>
         <p className={styles.copyright}>
-          &copy; {new Date().getFullYear()} Sperrzone24. Alle Rechte
+          &copy; {new Date().getFullYear()} SperrZone24. Alle Rechte
           vorbehalten.
         </p>
         <div className={styles.legalLinks}>
