@@ -3,6 +3,7 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,6 +133,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 0.5rem;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 .primaryButton {

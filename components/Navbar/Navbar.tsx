@@ -48,10 +48,10 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="Sperrzone24"
-            width={200}
+            width={250}
             height={45}
             priority
-            style={{ width: "200px", height: "auto" }}
+            style={{ width: "250px", height: "auto" }}
           />
         </Link>
 
