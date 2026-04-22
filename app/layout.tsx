@@ -14,7 +14,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Sperrzone24 – Verkehrssicherung Frankfurt",
+    default: "SperrZone24 – Verkehrssicherung Frankfurt",
     template: "%s | Sperrzone24",
   },
   description:
