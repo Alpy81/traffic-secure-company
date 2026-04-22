@@ -60,7 +60,17 @@ export default function StrassensperrungenPage() {
 
             <ul className={styles.featureList}>
               <li className={styles.featureItem}>
-                <span className={styles.featureIcon}>✔</span>
+                <span className={styles.featureIcon}>
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                    <path
+                      d="M1 5L4.5 8.5L11 1"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
                 <div>
                   <strong>Voll- und Teilsperrungen</strong>
                   <p>
@@ -70,7 +80,17 @@ export default function StrassensperrungenPage() {
                 </div>
               </li>
               <li className={styles.featureItem}>
-                <span className={styles.featureIcon}>✔</span>
+                <span className={styles.featureIcon}>
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                    <path
+                      d="M1 5L4.5 8.5L11 1"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
                 <div>
                   <strong>Umleitungskonzepte</strong>
                   <p>
@@ -80,7 +100,17 @@ export default function StrassensperrungenPage() {
                 </div>
               </li>
               <li className={styles.featureItem}>
-                <span className={styles.featureIcon}>✔</span>
+                <span className={styles.featureIcon}>
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                    <path
+                      d="M1 5L4.5 8.5L11 1"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
                 <div>
                   <strong>Behördliche Abstimmung</strong>
                   <p>
@@ -90,7 +120,17 @@ export default function StrassensperrungenPage() {
                 </div>
               </li>
               <li className={styles.featureItem}>
-                <span className={styles.featureIcon}>✔</span>
+                <span className={styles.featureIcon}>
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                    <path
+                      d="M1 5L4.5 8.5L11 1"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
                 <div>
                   <strong>Nacht- und Wochenendeinsätze</strong>
                   <p>

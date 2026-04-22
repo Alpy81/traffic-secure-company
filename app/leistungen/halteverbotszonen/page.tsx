@@ -65,7 +65,17 @@ export default function HalteverbotszenenPage() {
             <h2 className={styles.sectionTitle}>Unser Leistungsumfang</h2>
             <ul className={styles.featureList}>
               <li className={styles.featureItem}>
-                <span className={styles.featureIcon}>✔</span>
+                <span className={styles.featureIcon}>
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                    <path
+                      d="M1 5L4.5 8.5L11 1"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
                 <div>
                   <strong>Behördliche Genehmigung</strong>
                   <p>
@@ -75,7 +85,17 @@ export default function HalteverbotszenenPage() {
                 </div>
               </li>
               <li className={styles.featureItem}>
-                <span className={styles.featureIcon}>✔</span>
+                <span className={styles.featureIcon}>
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                    <path
+                      d="M1 5L4.5 8.5L11 1"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
                 <div>
                   <strong>Rechtzeitige Aufstellung</strong>
                   <p>
@@ -85,7 +105,17 @@ export default function HalteverbotszenenPage() {
                 </div>
               </li>
               <li className={styles.featureItem}>
-                <span className={styles.featureIcon}>✔</span>
+                <span className={styles.featureIcon}>
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                    <path
+                      d="M1 5L4.5 8.5L11 1"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
                 <div>
                   <strong>Abholung & Entsorgung</strong>
                   <p>
@@ -95,7 +125,17 @@ export default function HalteverbotszenenPage() {
                 </div>
               </li>
               <li className={styles.featureItem}>
-                <span className={styles.featureIcon}>✔</span>
+                <span className={styles.featureIcon}>
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                    <path
+                      d="M1 5L4.5 8.5L11 1"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
                 <div>
                   <strong>Kurzfristige Einsätze</strong>
                   <p>
