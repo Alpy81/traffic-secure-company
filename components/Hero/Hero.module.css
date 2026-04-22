@@ -3,7 +3,6 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,7 +132,6 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 0.5rem;
-  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 .primaryButton {
@@ -256,19 +254,6 @@
   .badgeDot {
     flex-shrink: 0;
   }
-
-  .content {
-    padding-bottom: 10rem;
-  }
-
-  .buttons {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    max-width: 320px;
-    gap: 0.75rem;
-  }
-
   .statsBar {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -297,5 +282,31 @@
 
   .statLabel {
     font-size: 0.65rem;
+  }
+}
+
+/* NEU hinzufügen: */
+@media (max-width: 465px) {
+  .content {
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 10rem;
+  }
+
+  .badge {
+    order: 3;
+    margin-top: 0.5rem;
+  }
+
+  .title {
+    order: 1;
+  }
+
+  .subtitle {
+    order: 4;
+  }
+
+  .buttons {
+    order: 5;
   }
 }
