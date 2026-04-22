@@ -258,6 +258,7 @@
   }
 
   .content {
+    padding-top: (var(--navbar-height) + 2rem);
     padding-bottom: 10rem;
   }
 
