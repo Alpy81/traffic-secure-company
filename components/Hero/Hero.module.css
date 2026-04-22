@@ -285,11 +285,10 @@
   }
 }
 
-/* NEU hinzufügen: */
 @media (max-width: 465px) {
   .content {
     flex-direction: column;
-    padding-top: 2rem;
+    padding-top: 3rem;
     padding-bottom: 10rem;
   }
 
