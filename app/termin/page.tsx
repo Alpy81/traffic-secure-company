@@ -88,7 +88,7 @@ export default function TerminPage() {
                 wir sind 24/7 erreichbar.
               </p>
               <a href="tel:+49123456789" className={styles.phoneLink}>
-                📞 +49 172 93 98 423
+                📞 +49 173 666 0900
               </a>
             </div>
           </div>
