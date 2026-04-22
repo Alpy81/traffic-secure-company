@@ -23,7 +23,7 @@ export default function CTA() {
             Jetzt Kontakt aufnehmen
           </Link>
           <Link href="tel:+49123456789" className={styles.secondaryButton}>
-            📞 +49 173 666 09 00
+            📞 +49 173 666 0900
           </Link>
         </div>
 

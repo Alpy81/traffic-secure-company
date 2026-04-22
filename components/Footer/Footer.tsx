@@ -100,14 +100,14 @@ export default function Footer() {
             <li>
               <span className={styles.contactIcon}>📍</span>
               <span>
-                Goethestr. 41
+                Gründenseestr. 26
                 <br />
-                63477 Maintal
+                60386 Frankfurt a.M.
               </span>
             </li>
             <li>
               <span className={styles.contactIcon}>📞</span>
-              <Link href="tel:+49123456789">+49 173 666 09 00</Link>
+              <Link href="tel:+49123456789">+49 173 666 0900</Link>
             </li>
             <li>
               <span className={styles.contactIcon}>✉️</span>
@@ -115,7 +115,11 @@ export default function Footer() {
             </li>
             <li>
               <span className={styles.contactIcon}>🕐</span>
-              <span>Mo–Fr: 07:00–18:00 Uhr</span>
+              <span>
+                Mo–Fr: 07:00–18:00 Uhr
+                <br />
+                Sa: 10:00–15:00 Uhr
+              </span>
             </li>
           </ul>
 

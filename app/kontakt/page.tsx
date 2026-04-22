@@ -135,9 +135,9 @@ export default function KontaktPage() {
               <div>
                 <p className={styles.infoLabel}>Adresse</p>
                 <p className={styles.infoText}>
-                  Goethestr. 41
+                  Gründenseestr. 26
                   <br />
-                  63477 Maintal
+                  60386 Frankfurt a.M.
                 </p>
               </div>
             </div>
@@ -147,7 +147,7 @@ export default function KontaktPage() {
               <div>
                 <p className={styles.infoLabel}>Telefon</p>
                 <p className={styles.infoText}>
-                  <Link href="tel:+49123456789">+49 173 666 09 00</Link>
+                  <Link href="tel:+49123456789">+49 173 666 0900</Link>
                 </p>
               </div>
             </div>
@@ -169,7 +169,8 @@ export default function KontaktPage() {
               <div>
                 <p className={styles.infoLabel}>Öffnungszeiten</p>
                 <p className={styles.infoText}>
-                  Mo – Fr: 07:00 – 18:00 Uhr
+                  Mo – Fr: 07:00 – 18:00 Uhr <br />
+                  Sa: 10:00 - 15:00 Uhr
                   <br />
                   Notdienst: 24/7
                 </p>
@@ -183,7 +184,7 @@ export default function KontaktPage() {
                 Dringender Notfall?
               </p>
               <Link href="tel:+49123456789" className={styles.emergencyNumber}>
-                +49 173 666 09 00
+                +49 173 666 0900
               </Link>
             </div>
           </div>
