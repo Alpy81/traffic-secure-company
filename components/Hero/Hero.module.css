@@ -271,7 +271,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 466px) {
   .badge {
     font-size: 0.68rem;
     letter-spacing: 0.06em;
