@@ -250,6 +250,10 @@
 
 /* ── Responsive ────────────────────────────────── */
 @media (max-width: 768px) {
+  .heroLogo {
+    display: none;
+  }
+
   .statItem {
     padding: 1rem 1.5rem;
   }
@@ -268,12 +272,6 @@
 }
 
 @media (max-width: 480px) {
-  .content {
-    flex-direction: column;
-    padding-top: 3rem;
-    padding-bottom: 12rem;
-  }
-
   .badge {
     font-size: 0.68rem;
     letter-spacing: 0.06em;
