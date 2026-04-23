@@ -16,7 +16,6 @@
   max-width: 90vw;
   object-fit: contain;
   margin-bottom: -4rem;
-  order: 0;
 }
 
 @media (max-width: 768px) {
@@ -249,6 +248,7 @@
 }
 
 /* ── Responsive ────────────────────────────────── */
+
 @media (max-width: 768px) {
   .heroLogo {
     display: none;
@@ -326,19 +326,6 @@
     padding-top: calc(80px + 3rem) !important;
     padding-bottom: 10rem;
   }
-}
-
-.badge {
-  order: 3;
-  margin-top: 0.5rem;
-}
-
-.title {
-  order: 1;
-}
-
-.subtitle {
-  order: 4;
 }
 
 .buttons {
