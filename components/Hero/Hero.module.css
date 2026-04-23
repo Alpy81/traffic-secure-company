@@ -255,7 +255,7 @@
   }
 
   .content {
-    margin-top: 0;
+    margin-top: 0 !important;
     padding-top: calc(80px + 3rem);
     padding-bottom: 8rem;
   }
