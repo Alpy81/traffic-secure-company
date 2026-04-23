@@ -272,6 +272,12 @@
 }
 
 @media (min-width: 466px) {
+  .content {
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+  }
+
   .badge {
     font-size: 0.68rem;
     letter-spacing: 0.06em;
