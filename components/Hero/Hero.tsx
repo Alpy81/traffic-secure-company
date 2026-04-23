@@ -16,6 +16,13 @@ export default function Hero() {
       <div className={styles.overlay} aria-hidden="true" />
 
       <div className={styles.content}>
+        <Image
+          src="/logo.png"
+          alt="Sperrzone24"
+          width={1000}
+          height={225}
+          className={styles.heroLogo}
+        />
         <div className={styles.badge}>
           <span className={styles.badgeDot} />
           Frankfurt & Umgebung — 24/7 im Einsatz
