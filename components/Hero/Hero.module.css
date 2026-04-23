@@ -322,31 +322,30 @@
 
 @media (max-width: 465px) {
   .content {
-    margin-top: 0;
-    padding-top: 2rem;
+    flex-direction: column;
+    padding-top: calc(80px + 3rem) !important;
     padding-bottom: 10rem;
   }
+}
+.badge {
+  order: 3;
+  margin-top: 0.5rem;
+}
 
-  .badge {
-    order: 3;
-    margin-top: 0.5rem;
-  }
+.title {
+  order: 1;
+}
 
-  .title {
-    order: 1;
-  }
+.subtitle {
+  order: 4;
+}
 
-  .subtitle {
-    order: 4;
-  }
-
-  .buttons {
-    order: 5;
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    max-width: 320px;
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
+.buttons {
+  order: 5;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  max-width: 320px;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
 }
