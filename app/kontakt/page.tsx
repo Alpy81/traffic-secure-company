@@ -147,7 +147,7 @@ export default function KontaktPage() {
               <div>
                 <p className={styles.infoLabel}>Telefon</p>
                 <p className={styles.infoText}>
-                  <Link href="tel:+49123456789">+49 173 666 0900</Link>
+                  <Link href="tel:+491736660900">+49 173 666 0900</Link>
                 </p>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function KontaktPage() {
                 <span className={styles.emergencyDot} />
                 Dringender Notfall?
               </p>
-              <Link href="tel:+49123456789" className={styles.emergencyNumber}>
+              <Link href="tel:+491736660900" className={styles.emergencyNumber}>
                 +49 173 666 0900
               </Link>
             </div>

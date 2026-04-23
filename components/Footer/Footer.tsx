@@ -107,7 +107,7 @@ export default function Footer() {
             </li>
             <li>
               <span className={styles.contactIcon}>📞</span>
-              <Link href="tel:+49123456789">+49 173 666 0900</Link>
+              <Link href="tel:+491736660900">+49 173 666 0900</Link>
             </li>
             <li>
               <span className={styles.contactIcon}>✉️</span>

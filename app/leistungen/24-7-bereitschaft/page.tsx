@@ -153,7 +153,7 @@ export default function BereitschaftPage() {
             uns.
           </p>
           <div className={styles.ctaButtons}>
-            <Link href="tel:+49123456789" className={styles.primaryButton}>
+            <Link href="tel:+49 173 666 0900" className={styles.primaryButton}>
               📞 Jetzt anrufen
             </Link>
             <Link href="/kontakt" className={styles.secondaryButton}>
