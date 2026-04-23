@@ -1,13 +1,20 @@
-import styles from "./termin.module.css";
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Termin buchen",
-  description:
-    "Buchen Sie jetzt einen Termin bei Sperrzone24 – schnell, einfach und unverbindlich.",
-};
+import Cal, { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
+import styles from "./termin.module.css";
 
 export default function TerminPage() {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "beratungsgespraech" });
+      cal("ui", {
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    })();
+  }, []);
+
   return (
     <main className={styles.page}>
       {/* Hero */}
@@ -27,14 +34,13 @@ export default function TerminPage() {
       {/* Content */}
       <section className={styles.content}>
         <div className={styles.container}>
-          {/* Calendly Embed */}
+          {/* Cal.com Embed */}
           <div className={styles.embedWrapper}>
-            <iframe
-              src="https://calendly.com/aertas90?hide_gdpr_banner=1"
-              className={styles.calendly}
-              title="Termin buchen"
-              frameBorder="0"
-              loading="lazy"
+            <Cal
+              namespace="beratungsgespraech"
+              calLink="https://cal.com/alpy-e-ulimu5"
+              style={{ width: "100%", height: "100%", overflow: "scroll" }}
+              config={{ layout: "month_view" }}
             />
           </div>
 
@@ -70,8 +76,8 @@ export default function TerminPage() {
                 <div>
                   <h3 className={styles.stepTitle}>Bestätigung erhalten</h3>
                   <p className={styles.stepText}>
-                    Sie erhalten sofort eine Bestätigung per E-Mail – wir sind
-                    pünktlich für Sie da.
+                    Sie erhalten sofort eine Bestätigung per E-Mail – wir rufen
+                    Sie pünktlich an.
                   </p>
                 </div>
               </div>
@@ -87,7 +93,7 @@ export default function TerminPage() {
                 Für kurzfristige Anfragen erreichen Sie uns direkt telefonisch —
                 wir sind 24/7 erreichbar.
               </p>
-              <a href="tel:+49123456789" className={styles.phoneLink}>
+              <a href="tel:+491736660900" className={styles.phoneLink}>
                 📞 +49 173 666 0900
               </a>
             </div>
