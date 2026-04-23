@@ -276,11 +276,6 @@
 }
 
 @media (max-width: 480px) {
-  .content {
-    padding-top: 2rem;
-    padding-bottom: 10rem;
-  }
-
   .badge {
     font-size: 0.68rem;
     letter-spacing: 0.06em;
@@ -326,6 +321,11 @@
 }
 
 @media (max-width: 465px) {
+  .content {
+    padding-top: 2rem;
+    padding-bottom: 10rem;
+  }
+
   .badge {
     order: 3;
     margin-top: 0.5rem;
