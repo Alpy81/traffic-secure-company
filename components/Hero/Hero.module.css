@@ -81,7 +81,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
-  margin-top: -6rem;
+  margin-top: -4rem;
 }
 
 /* ── Badge ─────────────────────────────────────── */
@@ -249,9 +249,22 @@
 }
 
 /* ── Responsive ────────────────────────────────── */
+/* ── Responsive ────────────────────────────────── */
 @media (max-width: 768px) {
   .heroLogo {
     display: none;
+  }
+
+  .content {
+    margin-top: 0;
+    padding-top: 2rem;
+    padding-bottom: 8rem;
+  }
+
+  .overlay::before {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
   }
 
   .statItem {
@@ -261,21 +274,12 @@
   .statNumber {
     font-size: 1.35rem;
   }
-
-  .overlay::before {
-    width: 0;
-    height: 0;
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-  }
 }
 
-@media (min-width: 466px) {
+@media (max-width: 480px) {
   .content {
-    flex-direction: column;
-    padding-top: 3rem;
-    padding-bottom: 6rem;
+    padding-top: 2rem;
+    padding-bottom: 10rem;
   }
 
   .badge {
@@ -323,12 +327,6 @@
 }
 
 @media (max-width: 465px) {
-  .content {
-    flex-direction: column;
-    padding-top: 3rem;
-    padding-bottom: 6rem;
-  }
-
   .badge {
     order: 3;
     margin-top: 0.5rem;
@@ -344,5 +342,11 @@
 
   .buttons {
     order: 5;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 320px;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
   }
 }
