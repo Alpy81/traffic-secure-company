@@ -256,7 +256,7 @@
 
   .content {
     margin-top: 0;
-    padding-top: calc(var(--navbar-height) + 2rem);
+    padding-top: calc(80px + 3rem);
     padding-bottom: 8rem;
   }
 
