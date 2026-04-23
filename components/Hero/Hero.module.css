@@ -315,7 +315,7 @@
   .content {
     flex-direction: column;
     padding-top: 3rem;
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
   }
 
   .badge {
