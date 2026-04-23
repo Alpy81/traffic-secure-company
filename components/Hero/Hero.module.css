@@ -319,7 +319,7 @@
   .content {
     flex-direction: column;
     padding-top: 3rem;
-    padding-bottom: 12rem;
+    padding-bottom: 6rem;
   }
 
   .badge {
