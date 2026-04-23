@@ -10,16 +10,16 @@ export const metadata: Metadata = {
 
 const values = [
   {
-    icon: "⚡",
-    title: "Schnelligkeit",
-    description:
-      "Wir reagieren schnell auf Ihre Anfragen und sind innerhalb kürzester Zeit vor Ort.",
-  },
-  {
     icon: "🛡️",
     title: "Sicherheit",
     description:
       "Die Sicherheit aller Verkehrsteilnehmer hat für uns oberste Priorität – ohne Kompromisse.",
+  },
+  {
+    icon: "⚡",
+    title: "Schnelligkeit",
+    description:
+      "Wir reagieren schnell auf Ihre Anfragen und sind innerhalb kürzester Zeit vor Ort.",
   },
   {
     icon: "✅",

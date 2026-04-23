@@ -61,7 +61,7 @@
 
 .sectionSubtitle {
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: whitesmoke;
   max-width: 520px;
   margin: 0 auto;
   line-height: 1.75;
@@ -147,7 +147,7 @@
 
 .cardDescription {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: whitesmoke;
   line-height: 1.75;
   flex: 1;
 }

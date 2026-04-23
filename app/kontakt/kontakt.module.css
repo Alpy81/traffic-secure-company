@@ -77,7 +77,7 @@
 
 .headerSubtitle {
   font-size: clamp(1rem, 2vw, 1.2rem);
-  color: rgba(255, 255, 255, 0.55);
+  color: whitesmoke;
   max-width: 520px;
   margin: 0 auto;
   line-height: 1.75;
@@ -138,7 +138,7 @@
 .label {
   font-size: 0.82rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.6);
+  color: whitesmoke;
   margin-bottom: 0.5rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -276,12 +276,12 @@
 
 .infoText {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: whitesmoke;
   line-height: 1.65;
 }
 
 .infoText a {
-  color: rgba(255, 255, 255, 0.6);
+  color: whitesmoke;
   text-decoration: none;
   transition: color 0.2s ease;
 }

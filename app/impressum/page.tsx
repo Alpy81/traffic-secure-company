@@ -34,9 +34,9 @@ export default function ImpressumPage() {
                 <br />
                 SperrZone24
                 <br />
-                Gründenseestr. 26
+                Goethestr. 41
                 <br />
-                60386 Frankfurt a.M.
+                63477 Maintal
                 <br />
                 Deutschland
               </p>

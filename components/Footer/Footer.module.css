@@ -76,7 +76,7 @@
 
 .description {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: whitesmoke;
   line-height: 1.8;
   max-width: 280px;
   margin: 0;
@@ -141,7 +141,7 @@
 
 .linkList li a {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: whitesmoke;
   text-decoration: none;
   transition: color 0.2s ease, padding-left 0.2s ease;
   display: inline-block;
@@ -165,11 +165,11 @@
   align-items: flex-start;
   gap: 0.65rem;
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: whitesmoke;
 }
 
 .contactList li a {
-  color: rgba(255, 255, 255, 0.5);
+  color: whitesmoke;
   text-decoration: none;
   transition: color 0.2s ease;
 }

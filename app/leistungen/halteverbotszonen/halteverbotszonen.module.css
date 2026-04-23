@@ -59,7 +59,7 @@
 
 .heroSubtitle {
   font-size: clamp(1rem, 2vw, 1.2rem);
-  color: rgba(255, 255, 255, 0.55);
+  color: whitesmoke;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.75;
@@ -154,7 +154,7 @@
 
 .text {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: whitesmoke;
   line-height: 1.85;
 }
 
@@ -212,7 +212,7 @@
 
 .featureItem p {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: whitesmoke;
   line-height: 1.7;
   margin: 0;
 }

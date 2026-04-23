@@ -118,12 +118,11 @@ export default function Footer() {
               <span>
                 Mo–Fr: 07:00–18:00 Uhr
                 <br />
-                Sa: 10:00–15:00 Uhr
+                und Sa: 10:00–15:00 Uhr
+                <br />
               </span>
             </li>
           </ul>
-
-          <p className={styles.ownerName}>Inhaber: Yunus Kurt</p>
         </div>
       </div>
 
