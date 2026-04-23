@@ -284,6 +284,7 @@
   .badgeDot {
     flex-shrink: 0;
   }
+
   .statsBar {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
