@@ -169,8 +169,8 @@ export default function KontaktPage() {
               <div>
                 <p className={styles.infoLabel}>Öffnungszeiten</p>
                 <p className={styles.infoText}>
-                  Mo – Fr: 07:00 – 18:00 <br />
-                  und Sa: 10:00 - 15:00
+                  Mo – Fr: 09.00 – 18.00 <br />
+                  Samstag 10.00 - 16.00
                   <br />
                   Notdienst: 24/7
                 </p>

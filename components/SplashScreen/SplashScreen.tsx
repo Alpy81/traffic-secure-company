@@ -11,11 +11,11 @@ export default function SplashScreen() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setFadeOut(true);
-    }, 3500);
+    }, 2500);
 
     const hideTimer = setTimeout(() => {
       setVisible(false);
-    }, 4200);
+    }, 3700);
 
     return () => {
       clearTimeout(timer);
@@ -31,7 +31,7 @@ export default function SplashScreen() {
         <Image
           src="/logo.png"
           alt="Sperrzone24"
-          width={400}
+          width={900}
           height={90}
           priority
           className={styles.logo}
