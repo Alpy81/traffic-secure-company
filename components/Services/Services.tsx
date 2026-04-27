@@ -4,6 +4,13 @@ import Link from "next/link";
 
 const services = [
   {
+    image: "/images/fahrbahnmarkierung.webp",
+    title: "Fahrbahnmarkierung",
+    description:
+      "Normgerechte Markierungsarbeiten für Straßen, Autobahnen und Parkflächen — präzise, dauerhaft und behördlich zugelassen.",
+    href: "/leistungen/fahrbahnmarkierung",
+  },
+  {
     image: "/images/halteverbot.webp",
     title: "Halteverbotszonen",
     description:

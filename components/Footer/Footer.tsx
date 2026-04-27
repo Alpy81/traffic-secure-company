@@ -90,6 +90,11 @@ export default function Footer() {
                 Beratung & Service
               </Link>
             </li>
+            <li>
+              <Link href="/leistungen/fahrbahnmarkierung">
+                Fahrbahnmarkierung
+              </Link>
+            </li>
           </ul>
         </div>
 
