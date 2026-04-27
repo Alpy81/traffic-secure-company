@@ -7,7 +7,10 @@ import styles from "./termin.module.css";
 export default function TerminPage() {
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi({ namespace: "beratungsgespraech" });
+      const cal = await getCalApi({
+        namespace: "beratungsgespraech",
+        embedJsUrl: "https://cal.eu/embed/embed.js",
+      });
       cal("ui", {
         hideEventTypeDetails: false,
         layout: "month_view",
@@ -38,9 +41,10 @@ export default function TerminPage() {
           <div className={styles.embedWrapper}>
             <Cal
               namespace="beratungsgespraech"
-              calLink="https://cal.com/alpy-e-ulimu5"
+              calLink="sperrzone24"
+              calOrigin="https://cal.eu"
               style={{ width: "100%", height: "100%", overflow: "scroll" }}
-              config={{ layout: "month_view" }}
+              config={{ layout: "month_view", name: " ", email: " " }}
             />
           </div>
 
