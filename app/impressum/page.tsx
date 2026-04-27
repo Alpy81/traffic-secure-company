@@ -16,9 +16,7 @@ export default function ImpressumPage() {
           <span className={styles.headerLabelLine} />
         </div>
         <h1 className={styles.headerTitle}>Impressum</h1>
-        <p className={styles.headerSubtitle}>
-          Angaben gemäß § 5 TMG (Musterdaten – bitte später ersetzen).
-        </p>
+        <p className={styles.headerSubtitle}>Angaben gemäß § 5 TMG.</p>
       </section>
 
       <section className={styles.content}>

@@ -17,9 +17,7 @@ export default function AGBPage() {
           <span className={styles.headerLabelLine} />
         </div>
         <h1 className={styles.headerTitle}>Allgemeine Geschäftsbedingungen</h1>
-        <p className={styles.headerSubtitle}>
-          Mustervorlage – bitte später durch rechtssichere AGB ersetzen.
-        </p>
+        <p className={styles.headerSubtitle}></p>
       </section>
 
       <section className={styles.content}>
