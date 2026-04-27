@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 2.4s ease;
+  transition: opacity 1.5s ease;
 }
 
 .fadeOut {
