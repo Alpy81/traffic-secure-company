@@ -10,6 +10,19 @@ export const metadata: Metadata = {
 
 const services = [
   {
+    icon: "🛣️",
+    title: "Fahrbahnmarkierung",
+    href: "/leistungen/fahrbahnmarkierung",
+    description:
+      "Normgerechte Markierungsarbeiten für Straßen, Autobahnen und Parkflächen — präzise, dauerhaft und behördlich zugelassen.",
+    features: [
+      "Autobahnmarkierungen nach ZTV M 13",
+      "Zebrastreifen & Haltelinien",
+      "Parkflächenmarkierungen",
+      "Kaltplastik & Thermoplast",
+    ],
+  },
+  {
     icon: "🚧",
     title: "Halteverbotszonen",
     href: "/leistungen/halteverbotszonen",
