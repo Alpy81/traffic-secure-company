@@ -116,7 +116,7 @@ export default function Footer() {
             <li>
               <span className={styles.contactIcon}>🕐</span>
               <span>
-                Mo–Fr: 07:00–18:00
+                Mo–Fr: 09:00–18:00
                 <br />
                 und Sa: 10:00–16:00
                 <br />
