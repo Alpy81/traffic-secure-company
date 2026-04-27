@@ -17,9 +17,7 @@ export default function DatenschutzPage() {
           <span className={styles.headerLabelLine} />
         </div>
         <h1 className={styles.headerTitle}>Datenschutzerklärung</h1>
-        <p className={styles.headerSubtitle}>
-          Mustervorlage – bitte später an Ihre tatsächlichen Tools anpassen.
-        </p>
+        <p className={styles.headerSubtitle}></p>
       </section>
 
       <section className={styles.content}>
