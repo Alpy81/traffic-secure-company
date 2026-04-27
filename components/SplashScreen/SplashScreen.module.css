@@ -17,7 +17,7 @@
 
 /* ── Logo Wrapper ──────────────────────────────── */
 .logoWrapper {
-  animation: logoIn 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: logoIn 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   opacity: 0;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .logo {
-  width: 960px;
+  width: 900px;
   max-width: 90vw;
   height: auto;
 }

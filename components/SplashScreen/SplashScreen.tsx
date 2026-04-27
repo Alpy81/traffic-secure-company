@@ -11,11 +11,11 @@ export default function SplashScreen() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setFadeOut(true);
-    }, 2000);
+    }, 3500);
 
     const hideTimer = setTimeout(() => {
       setVisible(false);
-    }, 2700);
+    }, 4200);
 
     return () => {
       clearTimeout(timer);
