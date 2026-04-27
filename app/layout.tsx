@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import CookieBanner from "../components/CookieBanner/CookieBanner";
+import SplashScreen from "../components/SplashScreen/SplashScreen";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -62,6 +63,7 @@ export default function RootLayout({
   return (
     <html lang="de" className={inter.variable} data-scroll-behavior="smooth">
       <body>
+        <SplashScreen />
         <Navbar />
         {children}
         <Footer />

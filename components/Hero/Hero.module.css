@@ -9,30 +9,6 @@
   overflow: hidden;
 }
 
-/* ── Hero Logo ─────────────────────────────────── */
-.heroLogo {
-  width: 1000px;
-  height: auto;
-  max-width: 90vw;
-  object-fit: contain;
-  margin-bottom: -4rem;
-}
-
-@media (max-width: 768px) {
-  .heroLogo {
-    width: 500px;
-    max-width: 85vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .heroLogo {
-    width: 280px;
-    max-width: 80vw;
-    margin-bottom: 0;
-  }
-}
-
 /* ── Hintergrundbild ───────────────────────────── */
 .bgImage {
   object-fit: cover;
@@ -249,10 +225,6 @@
 
 /* ── Responsive ────────────────────────────────── */
 @media (max-width: 768px) {
-  .heroLogo {
-    display: none;
-  }
-
   .content {
     margin-top: 0 !important;
     padding-top: calc(80px + 3rem);
