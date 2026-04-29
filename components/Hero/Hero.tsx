@@ -10,7 +10,7 @@ export default function Hero() {
         alt="Straßensperrung mit professioneller Absicherung"
         fill
         priority
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, 100vw"
         className={styles.bgImage}
       />
       <div className={styles.overlay} aria-hidden="true" />
