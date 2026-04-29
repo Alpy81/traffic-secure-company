@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     default: "SperrZone24 – Verkehrssicherung Frankfurt",
     template: "%s | Sperrzone24",
   },
+  verification: {
+    google: "2f18e7d3b0d63081",
+  },
   description:
     "Professionelle Verkehrssicherung in Frankfurt und Umgebung. Halteverbotszone, Absperrung, Streckensperrung und mehr – 24/7 für Sie im Einsatz.",
   icons: {
