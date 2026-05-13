@@ -402,6 +402,25 @@
   box-shadow: 0 8px 24px rgba(220, 38, 38, 0.55);
 }
 
+/* ── Datenschutzhinweis ────────────────────────── */
+.privacyNote {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.35);
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+.privacyLink {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.privacyLink:hover {
+  color: var(--color-orange);
+}
+
 /* ── Error ─────────────────────────────────────── */
 .errorMessage {
   color: #f87171;

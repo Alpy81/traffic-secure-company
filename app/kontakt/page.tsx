@@ -122,6 +122,15 @@ export default function KontaktPage() {
                   disabled={isPending}>
                   {isPending ? "Wird gesendet…" : "Nachricht senden"}
                 </button>
+                <p className={styles.privacyNote}>
+                  Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten
+                  gemäß unserer{" "}
+                  <a href="/datenschutz" className={styles.privacyLink}>
+                    Datenschutzerklärung
+                  </a>{" "}
+                  zu. Ihre Daten werden ausschließlich zur Bearbeitung Ihrer
+                  Anfrage verwendet.
+                </p>
               </form>
             )}
           </div>
